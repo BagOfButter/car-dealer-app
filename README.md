@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Car Dealer App - Test Task
 
-## Getting Started
+This is a simple Car Dealer App built as a test task. It consists of two main
+pages:
 
-First, run the development server:
+1. **Home Page**: Displays dropdowns and button that allow to select car
+   manufacturer and year.
+2. **Result Page**: Shows the search results for vehicles based on the user's
+   query.
 
-```bash
-npm run dev
+The app includes functionalities like selecting options, displaying vehicle
+cards, and navigating between pages.
+
+## Deploy
+
+The app is deployed using Vercel at:
+
+## Features:
+
+- **Result Page**: Displays a list of vehicles with their make and model.
+- **Home Page**: Provides an interface for the user to initiate a search.
+
+## Technologies Used:
+
+- React 19
+- Next.js 15
+- Tailwind CSS
+- Feature-sliced Design Architecture (https://feature-sliced.design/docs)
+
+How to Start and Build the Project
+
+1. Clone the repository: First, clone the repository to your local machine:
+
+`git clone https://github.com/your-username/car-dealer-app.git`
+
+2. Navigate to the project directory:
+
+`cd car-dealer-app`
+
+3. Install dependencies (make sure you have Node.js installed on your machine):
+
+`npm install`
+
 # or
-yarn dev
+
+`yarn install`
+
+4. Start the development server:
+
+`npm run dev`
+
 # or
-pnpm dev
+
+`yarn dev`
+
+The app will be available at http://localhost:3000.
+
+5. Build the project: To build the project for production, run:
+
+`npm run build`
+
 # or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`yarn build`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+After the build completes, you can start the production server with:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`npm run start`
 
-## Learn More
+# or
 
-To learn more about Next.js, take a look at the following resources:
+`yarn start`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This will serve the optimized app at http://localhost:3000.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Data Fetching and Suspense
 
-## Deploy on Vercel
+Although the app fetches data server-side, Suspense is used in places where the
+fetched data is displayed.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+In this app, Suspense is primarily used for displaying vehicle data. When the
+data is being fetched, a fallback is shown until the data is ready to be
+displayed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Error Handling and 404 Page
+
+The app uses a 404 page when the URL is incorrect, or when no vehicles are
+fetched for the specified search criteria. The 404 page is automatically
+displayed in such cases.
+
+## Dark Theme
+
+The app also includes a dark theme option, providing users with the flexibility
+to switch between light and dark modes for a better user experience, especially
+in low-light environments.

@@ -5,17 +5,23 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --header: #d1d5db;
+  --hover: #3b82f6;
+  --buttonText: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --header: #333333;
+    --hover: #3b82f6;
+    --buttonText: #ffffff;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
