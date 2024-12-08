@@ -11,9 +11,14 @@ pages:
 The app includes functionalities like selecting options, displaying vehicle
 cards, and navigating between pages.
 
+## Warning
+
+Due to public API request rate limits some data wont be fetched during the build
+process resulting in generated static pages having no data.
+
 ## Deploy
 
-The app is deployed using Vercel at:
+The app is deployed using Vercel at: https://car-dealer-app-silk.vercel.app/
 
 ## Features:
 
