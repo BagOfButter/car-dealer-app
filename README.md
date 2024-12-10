@@ -14,7 +14,7 @@ cards, and navigating between pages.
 ## Warning
 
 Due to public API request rate limits some data wont be fetched during the build
-process resulting in generated static pages having no data.
+process resulting in generated static pages having no data. Such pages will fetch data as usual when user visits them
 
 ## Deploy
 
